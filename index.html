@@ -155,6 +155,11 @@ footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(-
 .duo-photo img { width: 100%; height: auto; display: block; }
 .duo-cap { text-align: center; font-size: 13px; color: var(--text-deep-mute); margin: 0 auto 34px; letter-spacing: 0.3px; }
 
+/* TWO-CARD GRID (marquee clients) */
+.duo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 760px) { .duo-grid { grid-template-columns: 1fr; } }
+.roster-card .li-link { display: inline-block; margin-top: 8px; font-size: 13px; font-weight: 600; letter-spacing: 0.3px; }
+
 /* COMBINED STAT BAND */
 .combo-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; background: linear-gradient(135deg, rgba(201,151,58,0.10), rgba(0,0,0,0.5)); border: 1px solid var(--line-strong); border-radius: 8px; padding: 38px 34px; box-shadow: 0 24px 60px -30px rgba(201,151,58,0.22); }
 @media (max-width: 720px) { .combo-strip { grid-template-columns: 1fr; gap: 24px; } }
@@ -328,6 +333,28 @@ section.block { padding-top: 84px; padding-bottom: 84px; }
       <div class="quote-mark">&ldquo;</div>
       <div class="quote-text">He's sharp. He's on time. He works very quickly. If there's a problem, he's already solved it.</div>
       <div class="quote-attr">Repeated by multiple active clients</div>
+    </div>
+  </div>
+</section>
+
+<section class="block tint">
+  <div class="wrap">
+    <span class="section-eyebrow">Who I write for</span>
+    <h2>I grow the personal brands of <span class="gold">multi-eight-figure founders</span>.</h2>
+    <p class="section-lede">Beyond the agency, I write and run the LinkedIn and X presence for founders who've built and exited real companies.</p>
+    <div class="duo-grid">
+      <div class="roster-card">
+        <h5>Jake Castillo</h5>
+        <div class="niche">Founder, Cal AI · multi-8-figure entrepreneur</div>
+        <p>I write and grow Jake's personal brand on LinkedIn and X.</p>
+        <a href="https://www.linkedin.com/in/jake-castillo/" class="li-link" target="_blank" rel="noopener">View on LinkedIn ↗</a>
+      </div>
+      <div class="roster-card">
+        <h5>Anada Lakra</h5>
+        <div class="niche">Founder, BoldVoice · multi-8-figure entrepreneur</div>
+        <p>I write and grow Anada's personal brand on LinkedIn and X.</p>
+        <a href="https://www.linkedin.com/in/anadalakra/" class="li-link" target="_blank" rel="noopener">View on LinkedIn ↗</a>
+      </div>
     </div>
   </div>
 </section>
