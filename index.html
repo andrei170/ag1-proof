@@ -177,9 +177,40 @@ footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(-
 .op-card li:last-child { border-bottom: 0; }
 .op-card li::before { content: ""; position: absolute; left: 0; top: 21px; width: 9px; height: 1px; background: var(--gold); }
 .op-card li strong { color: var(--text); font-weight: 600; }
+
+/* ===================== AESTHETIC POLISH PASS ===================== */
+/* Thin gold accent bar at very top */
+.topbar { height: 3px; width: 100%; background: linear-gradient(90deg, var(--gold-deep), var(--gold-bright) 50%, var(--gold-deep)); }
+
+/* Eyebrows -> pill chips (aidrivers / Cameron England style) */
+.eyebrow, .section-eyebrow { border: 1px solid var(--line-strong); border-radius: 999px; padding: 7px 16px; background: rgba(201,151,58,0.06); }
+.section-eyebrow { display: block; width: fit-content; margin-left: auto; margin-right: auto; }
+.eyebrow { display: inline-block; }
+
+/* Subtle section-rhythm tint for depth */
+.block.tint { background: radial-gradient(circle at 50% -10%, rgba(201,151,58,0.06), transparent 62%); }
+
+/* Card micro-interactions */
+.op-card, .roster-card, .case-card, .proof-item, .combo-strip { transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+.op-card:hover, .roster-card:hover, .case-card:hover, .proof-item:hover { transform: translateY(-3px); border-color: var(--line-strong); box-shadow: 0 26px 60px -34px rgba(201,151,58,0.35); }
+.combo-strip:hover { box-shadow: 0 30px 80px -30px rgba(201,151,58,0.34); }
+
+/* Dividers between the combined stats */
+.combo-card { position: relative; }
+.combo-card + .combo-card::before { content: ""; position: absolute; left: -9px; top: 12%; height: 76%; width: 1px; background: var(--line); }
+@media (max-width: 720px) { .combo-card + .combo-card::before { display: none; } }
+
+/* Duo photo: soft gold ring + lift */
+.duo-photo { transition: transform .25s ease, box-shadow .25s ease; }
+.duo-photo:hover { transform: translateY(-3px); box-shadow: 0 36px 90px -30px rgba(201,151,58,0.4); }
+
+/* Section heads breathe a little more */
+section.block { padding-top: 84px; padding-bottom: 84px; }
 </style>
 </head>
 <body>
+
+<div class="topbar"></div>
 
 <nav class="nav">
   <div class="nav-inner">
@@ -242,9 +273,9 @@ footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(-
         </div>
         <ul>
           <li><strong>$1M+ in client revenue</strong> generated in the first six months</li>
-          <li><strong>$172k month one</strong> with a single info product client</li>
-          <li>Full-stack solo build — funnels, copy, VSLs, ads, email, tech, close</li>
-          <li>Founded AG1 Consulting in 2024 — self-taught, AI-leveraged</li>
+          <li><strong>$172k in month one</strong> with a single info product client</li>
+          <li>Built the <strong>entire funnel for a 180k-follower brand</strong> from zero — offer, VSL, automation, community, the close</li>
+          <li>Replaces a <strong>whole marketing team</strong> solo — funnels, copy, ads, email, tech — with AI leverage</li>
         </ul>
       </div>
       <div class="op-card k">
@@ -256,10 +287,10 @@ footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(-
           </div>
         </div>
         <ul>
-          <li><strong>Built a 14-location Orangetheory group</strong> in Canada before 25 (11 open + 3 signed) — high seven-figure exit</li>
+          <li><strong>Built a 14-location Orangetheory group</strong> in Canada before age 25 (11 open + 3 signed) — high seven-figure exit</li>
           <li>Founded a <strong>marketing agency in April 2024 that crossed $3M</strong> in sales</li>
-          <li>Built a fintech brand <strong>0 → seven-figure run-rate in ~60 days</strong>, entirely on AI / Claude Code</li>
-          <li>AI-systems lead inside Artisan Lab — the automation layer behind the engine</li>
+          <li>Built a fintech brand <strong>from $0 to a seven-figure run-rate in ~60 days</strong>, entirely on AI</li>
+          <li>Founder of <strong>AI Drivers — an AI operating system now run by 50+ businesses</strong></li>
         </ul>
       </div>
     </div>
@@ -289,7 +320,7 @@ footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(-
   </div>
 </section>
 
-<section class="block">
+<section class="block tint">
   <div class="wrap">
     <span class="section-eyebrow">In their words</span>
     <h2>What clients say.</h2>
@@ -382,7 +413,7 @@ footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(-
 <!-- public Client Ascension case study + AI Drivers brand + recorded     -->
 <!-- interview. Confirm exact wording with him before deploying live.     -->
 <!-- =================================================================== -->
-<section class="block" id="partner">
+<section class="block tint" id="partner">
   <div class="wrap">
     <span class="section-eyebrow">How we split the work</span>
     <h2>One point of contact. <span class="gold">Double the firepower.</span></h2>
