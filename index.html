@@ -143,6 +143,32 @@ footer .foot-links { margin: 14px 0 0; }
 footer .foot-links a { margin-right: 22px; color: var(--text-mute); }
 footer .foot-links a:hover { color: var(--gold); }
 footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 12px; }
+
+/* COMBINED STAT BAND */
+.combo-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; background: linear-gradient(135deg, rgba(201,151,58,0.10), rgba(0,0,0,0.5)); border: 1px solid var(--line-strong); border-radius: 8px; padding: 38px 34px; box-shadow: 0 24px 60px -30px rgba(201,151,58,0.22); }
+@media (max-width: 720px) { .combo-strip { grid-template-columns: 1fr; gap: 24px; } }
+.combo-card { text-align: center; }
+.combo-num { font-family: var(--serif); font-weight: 700; font-size: clamp(40px, 5vw, 56px); line-height: 1; background: linear-gradient(135deg, var(--gold-bright), var(--gold-deep)); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 10px; letter-spacing: -1px; }
+.combo-num small { font-size: 22px; opacity: 0.85; font-weight: 600; -webkit-text-fill-color: initial; color: var(--gold); }
+.combo-label { font-size: 14px; color: var(--text-mute); line-height: 1.5; }
+
+/* VERSUS / SIDE-BY-SIDE */
+.versus { display: grid; grid-template-columns: 1fr 60px 1fr; align-items: stretch; gap: 0; }
+@media (max-width: 820px) { .versus { grid-template-columns: 1fr; gap: 18px; } }
+.op-card { background: linear-gradient(180deg, var(--surface), var(--black)); border: 1px solid var(--line); border-radius: 8px; padding: 34px 30px; }
+.op-card.k { border-color: var(--line-strong); }
+.op-head { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
+.op-mono { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-weight: 700; font-size: 20px; color: var(--black); background: linear-gradient(135deg, var(--gold-bright), var(--gold-deep)); flex: 0 0 auto; }
+.op-name { font-family: var(--sans); font-weight: 700; font-size: 19px; color: var(--text); }
+.op-role { font-size: 11.5px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin: 4px 0 20px; }
+.op-card ul { list-style: none; padding: 0; }
+.op-card li { font-size: 15px; line-height: 1.55; padding: 11px 0 11px 20px; position: relative; color: var(--text-mute); border-bottom: 1px solid var(--line); }
+.op-card li:last-child { border-bottom: 0; }
+.op-card li::before { content: ""; position: absolute; left: 0; top: 19px; width: 9px; height: 1px; background: var(--gold); }
+.op-card li strong { color: var(--text); font-weight: 600; }
+.vs-mid { display: flex; align-items: center; justify-content: center; }
+.vs-mid span { font-family: var(--serif); font-weight: 700; font-size: 30px; color: var(--gold); opacity: 0.8; }
+@media (max-width: 820px) { .vs-mid { padding: 2px 0; } .vs-mid span { font-size: 24px; } }
 </style>
 </head>
 <body>
@@ -156,15 +182,68 @@ footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(-
 
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">Andrei Givero · AG1 Consulting Ltd</span>
-    <h1>The proof. <span class="gold">In one place.</span></h1>
-    <p class="hero-sub">I'm Andrei. I build the full marketing stack for info product owners, solo, with AI leverage. No theory on this page — just the receipts, the numbers, and the work. $172k month one with one client. $1M+ across the book in six months.</p>
+    <span class="eyebrow">Andrei Givero × Kabrin Johal</span>
+    <h1>Two operators. <span class="gold">One engine.</span></h1>
+    <p class="hero-sub">I build the full marketing stack — funnels, copy, VSLs, ads, close. Kabrin Johal builds the AI infrastructure that makes it run at the speed of a team. Between us: a marketing book, a fitness empire exit, a $3M agency, and a fintech built on AI. Here's the proof.</p>
     <div class="cta-row">
-      <a href="#receipts" class="cta-secondary">See the receipts</a>
+      <a href="#operators" class="cta-secondary">Meet the operators</a>
       <a href="https://calendly.com/ag-copy/call-with-andrei" class="cta-primary" target="_blank" rel="noopener">Book A Call</a>
     </div>
   </div>
 </header>
+
+<section class="block" id="operators">
+  <div class="wrap">
+    <span class="section-eyebrow">The partnership</span>
+    <h2>Two specialists. <span class="gold">Combined firepower.</span></h2>
+    <p class="section-lede">Most agencies hand your work across a rotation of freelancers. This is the opposite: two operators who've each built and exited real businesses, pointed at one engine.</p>
+
+    <div class="combo-strip">
+      <div class="combo-card">
+        <div class="combo-num">$4M<small>+</small></div>
+        <div class="combo-label">Combined revenue generated — $1M+ in client revenue (Andrei) and a $3M+ agency (Kabrin).</div>
+      </div>
+      <div class="combo-card">
+        <div class="combo-num">14</div>
+        <div class="combo-label">Fitness locations built and exited by Kabrin before age 25 — a high seven-figure exit.</div>
+      </div>
+      <div class="combo-card">
+        <div class="combo-num">2</div>
+        <div class="combo-label">Operators, one engine. Marketing and AI infrastructure, no coordination tax.</div>
+      </div>
+    </div>
+
+    <div class="versus" style="margin-top:26px;">
+      <div class="op-card">
+        <div class="op-head">
+          <div class="op-mono">AG</div>
+          <div class="op-name">Andrei Givero</div>
+        </div>
+        <div class="op-role">Marketing &amp; Funnels · AG1 Consulting</div>
+        <ul>
+          <li><strong>$1M+ in client revenue</strong> generated in the first six months</li>
+          <li><strong>$172k month one</strong> with a single info product client</li>
+          <li>Full-stack solo build — funnels, copy, VSLs, ads, email, tech, close</li>
+          <li>Founded AG1 Consulting in 2024, self-taught, AI-leveraged</li>
+        </ul>
+      </div>
+      <div class="vs-mid"><span>+</span></div>
+      <div class="op-card k">
+        <div class="op-head">
+          <div class="op-mono">KJ</div>
+          <div class="op-name">Kabrin Johal</div>
+        </div>
+        <div class="op-role">AI Infrastructure · AI Drivers</div>
+        <ul>
+          <li><strong>Built &amp; exited 14 fitness locations</strong> in Canada before age 25 — high seven-figure exit</li>
+          <li>Founded a <strong>marketing agency in April 2024 that crossed $3M</strong> in sales</li>
+          <li>Built a fintech brand <strong>0 → seven-figure run-rate in ~60 days</strong>, entirely on AI / Claude Code</li>
+          <li>AI-systems lead inside Artisan Lab — the automation layer behind the engine</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="block" id="receipts">
   <div class="wrap">
@@ -179,29 +258,6 @@ footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(-
       <div class="proof-item">
         <img src="proof/stripe-dashboard.png" alt="Stripe dashboard showing $331K gross volume and $306K succeeded payments with 101 percent period growth">
         <div class="proof-cap"><strong>$331K gross volume</strong> · $306,835 succeeded payments · +101% vs previous period · live Stripe overview.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="block">
-  <div class="wrap">
-    <div class="results-strip">
-      <div class="result-card">
-        <div class="result-num">$172<small>k</small></div>
-        <div class="result-label">First-month revenue with one info product client. Solo build.</div>
-      </div>
-      <div class="result-card">
-        <div class="result-num">$1M<small>+</small></div>
-        <div class="result-label">Total client revenue generated in the first six months of operation.</div>
-      </div>
-      <div class="result-card">
-        <div class="result-num">$742<small>k</small></div>
-        <div class="result-label">Attributed client revenue on the dashboard above, six-month window.</div>
-      </div>
-      <div class="result-card">
-        <div class="result-num">1</div>
-        <div class="result-label">Operator. No team retainers, no fragmented freelancers.</div>
       </div>
     </div>
   </div>
@@ -302,23 +358,16 @@ footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(-
 <!-- =================================================================== -->
 <section class="block" id="partner">
   <div class="wrap">
-    <span class="section-eyebrow">The partnership</span>
-    <h2>You're not just getting <span class="gold">one operator</span>.</h2>
-    <p class="section-lede">I run the marketing build. My partner runs the AI infrastructure and brings the operator track record behind it. Two specialists, one engine — not a freelancer rotation.</p>
+    <span class="section-eyebrow">How we split the work</span>
+    <h2>One point of contact. <span class="gold">Double the firepower.</span></h2>
     <div class="net-card">
       <div>
-        <h3>Kabrin Johal · Partner, AI Infrastructure</h3>
-        <p>Founder of AI Drivers and a lead inside Artisan Lab, Kabrin builds the systems and automation layer that lets the whole engine run at the speed of a team. The track record behind it:</p>
-        <ul>
-          <li>Built and exited 14 Orangetheory Fitness locations in Canada before he was 25 — a high seven-figure exit</li>
-          <li>Founded a marketing agency in April 2024 that crossed $3M in sales</li>
-          <li>Recently built and scaled a fintech brand from zero to a seven-figure run-rate in ~60 days — backend and all — entirely on AI / Claude Code, now fielding acquisition offers</li>
-          <li>AI-assisted fulfilment that gets a client engine live in days, not months</li>
-        </ul>
+        <p>I own the marketing — offer architecture, funnels, copy, VSLs, traffic, and the close. That's what scales revenue.</p>
+        <p>Kabrin owns the AI infrastructure — the agents and automation that make the whole engine run autonomously and deploy in days, not months. That's what scales without a team.</p>
       </div>
       <div>
-        <p>What that means for you: I own the marketing — offer, funnel, copy, traffic, close. Kabrin owns the AI infrastructure that makes it run autonomously and scale. Same single point of contact, double the firepower behind it.</p>
-        <p>One marketing operator, one systems partner, and tools built to move money — not theory from a course.</p>
+        <p>You still talk to one person. Behind that person are two operators who've each built and exited real businesses — not a freelancer rotation, not a black-box agency with a junior on your account.</p>
+        <p>Marketing that moves money, infrastructure built to run it. That's the engine.</p>
       </div>
     </div>
   </div>
