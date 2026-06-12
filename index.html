@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Andrei Givero · Proof · AG1 Consulting Ltd</title>
-<meta name="description" content="The proof, in one place. Receipts, results, active partnerships, and case work from AG1 Consulting Ltd — the one-operator marketing partner for info product owners.">
+<title>Andrei Givero × Kabrin Johal · The Proof · AG1 Consulting</title>
+<meta name="description" content="Two operators, one engine. $4M+ combined revenue generated, a 14-location fitness exit, a $3M agency, and a fintech built on AI. Live dashboards and case work. AG1 Consulting Ltd.">
 <meta name="robots" content="index, follow">
-<meta property="og:title" content="Andrei Givero · The Proof">
-<meta property="og:description" content="$172k month one with one client. $1M+ across the book in six months. Live dashboards, active partnerships, and case work. One operator. AG1 Consulting Ltd.">
+<meta property="og:title" content="Andrei Givero × Kabrin Johal · The Proof">
+<meta property="og:description" content="Two operators. One engine. $4M+ combined revenue generated. Live dashboards, a 14-location exit, a $3M agency, and a fintech built on AI. AG1 Consulting Ltd.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/hero-bg.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -144,6 +144,17 @@ footer .foot-links a { margin-right: 22px; color: var(--text-mute); }
 footer .foot-links a:hover { color: var(--gold); }
 footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 12px; }
 
+/* NAV LINKS */
+.nav-links { display: flex; gap: 26px; }
+.nav-links a { font-family: var(--sans); font-size: 14px; color: var(--text-mute); font-weight: 500; letter-spacing: 0.2px; }
+.nav-links a:hover { color: var(--gold); }
+@media (max-width: 760px) { .nav-links { display: none; } }
+
+/* DUO PHOTO */
+.duo-photo { max-width: 400px; margin: 0 auto 14px; border-radius: 12px; overflow: hidden; border: 1px solid var(--line-strong); box-shadow: 0 28px 70px -30px rgba(201,151,58,0.32); }
+.duo-photo img { width: 100%; height: auto; display: block; }
+.duo-cap { text-align: center; font-size: 13px; color: var(--text-deep-mute); margin: 0 auto 34px; letter-spacing: 0.3px; }
+
 /* COMBINED STAT BAND */
 .combo-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; background: linear-gradient(135deg, rgba(201,151,58,0.10), rgba(0,0,0,0.5)); border: 1px solid var(--line-strong); border-radius: 8px; padding: 38px 34px; box-shadow: 0 24px 60px -30px rgba(201,151,58,0.22); }
 @media (max-width: 720px) { .combo-strip { grid-template-columns: 1fr; gap: 24px; } }
@@ -173,6 +184,11 @@ footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(-
 <nav class="nav">
   <div class="nav-inner">
     <a href="#" class="brand-mark"><span class="a">AG1</span> Consulting <span class="sub">LTD</span></a>
+    <div class="nav-links">
+      <a href="#operators">The operators</a>
+      <a href="#receipts">Receipts</a>
+      <a href="#work">Case work</a>
+    </div>
     <a href="https://calendly.com/ag-copy/call-with-andrei" class="cta-nav" target="_blank" rel="noopener">Book A Call</a>
   </div>
 </nav>
@@ -194,6 +210,11 @@ footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(-
     <span class="section-eyebrow">The partnership</span>
     <h2>Two specialists. <span class="gold">Combined firepower.</span></h2>
     <p class="section-lede">Most agencies hand your work across a rotation of freelancers. This is the opposite: two operators who've each built and exited real businesses, pointed at one engine.</p>
+
+    <div id="duo">
+      <div class="duo-photo"><img src="assets/andrei-kabrin.jpg" alt="Andrei Givero and Kabrin Johal" onerror="document.getElementById('duo').style.display='none'"></div>
+      <div class="duo-cap">Kabrin Johal (left) &amp; Andrei Givero (right)</div>
+    </div>
 
     <div class="combo-strip">
       <div class="combo-card">
@@ -241,6 +262,11 @@ footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(-
           <li>AI-systems lead inside Artisan Lab — the automation layer behind the engine</li>
         </ul>
       </div>
+    </div>
+
+    <div class="cta-row" style="margin-top:36px;">
+      <a href="#receipts" class="cta-secondary">See the receipts</a>
+      <a href="https://calendly.com/ag-copy/call-with-andrei" class="cta-primary" target="_blank" rel="noopener">Book A Call</a>
     </div>
   </div>
 </section>
@@ -300,10 +326,10 @@ footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(-
   </div>
 </section>
 
-<section class="block">
+<section class="block" id="work">
   <div class="wrap">
     <span class="section-eyebrow">Case work</span>
-    <h2>What it looks like when one operator <span class="gold">runs the whole stack</span>.</h2>
+    <h2>What it looks like when I <span class="gold">own the entire marketing build</span>.</h2>
     <div class="case-grid">
 
       <div class="case-card">
@@ -336,7 +362,7 @@ footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(-
   <div class="wrap">
     <span class="section-eyebrow">On video</span>
     <h2>The case study, <span class="gold">in full</span>.</h2>
-    <p class="section-lede">A walkthrough of the work and how the one-operator model actually delivers.</p>
+    <p class="section-lede">A walkthrough of the work and how the model actually delivers.</p>
     <div class="video-wrap">
       <div class="video-frame">
         <iframe src="https://www.youtube.com/embed/qHTdmJBBZoQ" title="AG1 Consulting case study" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -386,13 +412,13 @@ footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(-
 <footer>
   <div class="wrap">
     <div class="foot-brand">AG1 Consulting Ltd</div>
-    <p>One operator. Full-stack marketing infrastructure for info product owners. Setup fee plus revenue share. Founded 2024. United Kingdom.</p>
+    <p>Full-stack marketing by Andrei Givero, AI infrastructure by Kabrin Johal. One point of contact, two operators. Setup fee plus revenue share. Founded 2024. United Kingdom.</p>
     <div class="foot-links">
       <a href="https://instagram.com/andre.g1" target="_blank" rel="noopener">Instagram</a>
       <a href="https://calendly.com/ag-copy/call-with-andrei" target="_blank" rel="noopener">Book a call</a>
     </div>
     <div class="legal">
-      &copy; 2026 AG1 Consulting Ltd. United Kingdom. All client revenue figures are pre-tax, top-line, and reflect work delivered solo. The $172k month-one figure references one specific client partnership. Dashboard figures reflect attributed client revenue over the stated window. Individual results vary by offer maturity, audience size, and operator commitment. Details available on the call.
+      &copy; 2026 AG1 Consulting Ltd. United Kingdom. Andrei's client revenue figures are pre-tax, top-line, and reflect marketing work he delivered; the $172k month-one figure references one specific client partnership, and dashboard figures reflect attributed client revenue over the stated window. The "$4M+ combined" figure comprises Andrei's $1M+ in client revenue generated and Kabrin's $3M+ in agency sales — two distinct categories. Kabrin Johal's track record (franchise exit, agency, fintech) reflects his own ventures. Nothing here is a guarantee; individual results vary by offer maturity, audience size, and commitment. Details on the call.
     </div>
   </div>
 </footer>
