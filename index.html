@@ -162,6 +162,25 @@ footer .legal { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(-
 .roster-card .li-link { display: inline-block; margin-top: 8px; font-size: 13px; font-weight: 600; letter-spacing: 0.3px; }
 .client-photo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line-strong); display: block; margin-bottom: 14px; }
 
+/* WHAT MAKES US DIFFERENT */
+.diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 760px) { .diff-grid { grid-template-columns: 1fr; } }
+.diff-card { border-radius: 10px; padding: 30px 28px; border: 1px solid var(--line); }
+.diff-card.them { background: var(--surface); }
+.diff-card.us { border-color: var(--line-strong); background: linear-gradient(180deg, rgba(201,151,58,0.08), var(--black)); }
+.diff-head { font-family: var(--sans); font-weight: 700; font-size: 12.5px; letter-spacing: 1.6px; text-transform: uppercase; margin-bottom: 18px; }
+.diff-card.them .diff-head { color: var(--text-deep-mute); }
+.diff-card.us .diff-head { color: var(--gold); }
+.diff-card ul { list-style: none; padding: 0; margin: 0; }
+.diff-card li { font-size: 15px; line-height: 1.55; padding: 12px 0 12px 22px; position: relative; border-bottom: 1px solid var(--line); }
+.diff-card li:last-child { border-bottom: 0; }
+.diff-card li::before { content: ""; position: absolute; left: 0; top: 21px; width: 10px; height: 1px; }
+.diff-card.them li { color: var(--text-deep-mute); }
+.diff-card.them li::before { background: var(--text-deep-mute); }
+.diff-card.us li { color: var(--text); }
+.diff-card.us li::before { background: var(--gold); }
+.diff-card.us li strong { color: var(--gold); font-weight: 600; }
+
 /* COMBINED STAT BAND */
 .combo-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; background: linear-gradient(135deg, rgba(201,151,58,0.10), rgba(0,0,0,0.5)); border: 1px solid var(--line-strong); border-radius: 8px; padding: 38px 34px; box-shadow: 0 24px 60px -30px rgba(201,151,58,0.22); }
 @media (max-width: 720px) { .combo-strip { grid-template-columns: 1fr; gap: 24px; } }
@@ -457,6 +476,36 @@ section.block { padding-top: 84px; padding-bottom: 84px; }
       <div>
         <p>You still talk to one person. Behind that person are two operators who've each built and exited real businesses — not a freelancer rotation, not a black-box agency with a junior on your account.</p>
         <p>Marketing that moves money, infrastructure built to run it. That's the engine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <span class="section-eyebrow">What makes us different</span>
+    <h2>You've heard the pitch from <span class="gold">every other agency</span>.</h2>
+    <p class="section-lede">The whole space sounds the same, and most of it underdelivers. Here's the honest gap between the typical agency and this partnership.</p>
+    <div class="diff-grid">
+      <div class="diff-card them">
+        <div class="diff-head">The typical agency</div>
+        <ul>
+          <li>Run by someone who bought a course last year</li>
+          <li>A flat monthly retainer whether it works or not</li>
+          <li>You're handed to an account manager and a rotation of freelancers</li>
+          <li>Weeks of onboarding before anything ships</li>
+          <li>Has never built or run a real business</li>
+        </ul>
+      </div>
+      <div class="diff-card us">
+        <div class="diff-head">This partnership</div>
+        <ul>
+          <li>Two operators who've <strong>built, funded, and exited</strong> real companies</li>
+          <li>Setup fee plus revenue share — <strong>we only get paid when you do</strong></li>
+          <li><strong>One point of contact</strong> — the two people actually doing the work</li>
+          <li>AI-leveraged, so we <strong>ship in days, not months</strong></li>
+          <li>We run our own businesses and the brands of <strong>multi-eight-figure founders</strong></li>
+        </ul>
       </div>
     </div>
   </div>
